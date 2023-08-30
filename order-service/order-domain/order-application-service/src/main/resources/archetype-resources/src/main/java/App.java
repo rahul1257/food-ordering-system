@@ -1,4 +1,4 @@
-package $com.food.ordering.system;
+package $com.food.ordering.system.order;
 
 /**
  * Hello world!
