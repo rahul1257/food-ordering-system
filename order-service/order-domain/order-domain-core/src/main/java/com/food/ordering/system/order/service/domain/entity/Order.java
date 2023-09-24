@@ -16,7 +16,6 @@ public class Order extends AggregateRoot<OrderId> {
     private final StreetAddress deliveryAddress;
     private final Money price;
     private final List<OrderItem> items;
-
     private TrackingId trackingId;;
     private OrderStatus orderStatus;
     private List<String> failureMessages;
@@ -122,6 +121,10 @@ public class Order extends AggregateRoot<OrderId> {
         trackingId = builder.trackingId;
         orderStatus = builder.orderStatus;
         failureMessages = builder.failureMessages;
+    }
+
+    public static Builder builder() {
+        return new Builder();
     }
 
     public CustomerId getCustomerId() {
